@@ -18,8 +18,9 @@
         <!-- зависимости для тестирования -->
         <rest-assured.version>5.3.0</rest-assured.version>
         <junit.version>4.13.2</junit.version>
+        <jackson.version>2.15.2</jackson.version>
 
-        <!-- версия Aspectj (используем стабильную 1.9.19) -->
+        <!-- версия Aspectj -->
         <aspectj.version>1.9.19</aspectj.version>
         <!-- версия Allure -->
         <allure.version>2.21.0</allure.version>
@@ -31,6 +32,26 @@
             <groupId>io.rest-assured</groupId>
             <artifactId>rest-assured</artifactId>
             <version>${rest-assured.version}</version>
+            <scope>test</scope>
+        </dependency>
+
+        <!-- Jackson для JSON сериализации -->
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>${jackson.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-core</artifactId>
+            <version>${jackson.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-annotations</artifactId>
+            <version>${jackson.version}</version>
             <scope>test</scope>
         </dependency>
 
